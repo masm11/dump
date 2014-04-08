@@ -1,0 +1,31 @@
+十六進バイナリダンプ
+
+  こんな出力が得られるプログラム。
+
+  # dump.c
+  00000000  23 69 6e 63 6c 75 64 65  20 3c 73 74 64 69 6f 2e  #include <stdio.
+  00000010  68 3e 0a 23 69 6e 63 6c  75 64 65 20 3c 73 79 73  h>.#include <sys
+  00000020  2f 74 79 70 65 73 2e 68  3e 0a 0a 73 74 61 74 69  /types.h>..stati
+  00000030  63 20 76 6f 69 64 20 64  75 6d 70 28 46 49 4c 45  c void dump(FILE
+  00000040  20 2a 66 70 29 3b 0a 73  74 61 74 69 63 20 76 6f   *fp);.static vo
+
+コンパイル
+
+  make dump
+
+  Makefile はないけど、これでいける。
+
+  できた dump は、適当に path の通った所に置くと良い。
+
+
+実行
+
+    % dump <filename>
+
+    または、標準入力からでも良いので、
+
+    % cat <filename> | dump
+
+
+作者
+  原野裕樹 <masm@flowernet.gr.jp>
